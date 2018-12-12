@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from '../../domain/iproduct';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-products-list',
@@ -16,11 +17,12 @@ export class ProductsListComponent implements OnInit {
 
   products: IProduct[];
 
-  constructor() { } // Dependency injection !
+  constructor(private _service: ProductsService) {  // Dependency injection !
+  }
 
   ngOnInit() {
-
-     console.log('In OnInit');
+    this.products = this._service.getAllProducts();
+    console.log('In OnInit');
   }
   toggleImage(): void {
     this.showImage = !this.showImage;

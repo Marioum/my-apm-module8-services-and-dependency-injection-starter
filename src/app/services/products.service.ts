@@ -12,7 +12,7 @@ export class ProductsService {
     return [
       {
         'productId': 1,
-        'productName': 'Leaf Rake',
+        'productName': ' From service Leaf Rake',
         'productCode': 'GDN-0011',
         'releaseDate': 'March 19, 2016',
         'description': 'Leaf rake with 48-inch wooden handle.',
