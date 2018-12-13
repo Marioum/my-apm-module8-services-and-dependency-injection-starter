@@ -14,14 +14,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule, Route } from '@angular/router';
 import { ProductsDetailComponent } from './components/products-detail/products-detail.component';
-
-const routes: Route[] = [
-  {path: 'list', component: ProductsListComponent},
-  {path: 'welcome', component: WelcomeComponent},
-  {path: 'detail/:id', component: ProductsDetailComponent},
-  {path: '', redirectTo: 'welcome', pathMatch: 'full'},
-  {path: '**', component: NotfoundComponent}
-];
+import { RoutingModule } from './routing/routing.module';
 
 @NgModule({
   declarations: [
@@ -40,7 +33,7 @@ const routes: Route[] = [
     NgbModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
