@@ -13,10 +13,12 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule, Route } from '@angular/router';
+import { ProductsDetailComponent } from './components/products-detail/products-detail.component';
 
 const routes: Route[] = [
-  {path: 'welcome', component: WelcomeComponent},
   {path: 'list', component: ProductsListComponent},
+  {path: 'welcome', component: WelcomeComponent},
+  {path: 'detail/:id', component: ProductsDetailComponent},
   {path: '', redirectTo: 'welcome', pathMatch: 'full'},
   {path: '**', component: NotfoundComponent}
 ];
@@ -30,7 +32,8 @@ const routes: Route[] = [
     WelcomeComponent,
     NotfoundComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ProductsDetailComponent
   ],
   imports: [
     BrowserModule,
